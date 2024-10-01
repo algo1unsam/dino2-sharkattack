@@ -705,6 +705,7 @@
 {"level":"info","message":"⌛ Building environment","timeElapsed":126,"timestamp":"2024-10-01T21:37:55.522Z"}
 {"level":"info","message":"⌛ Validating dinoGame.wlk","timeElapsed":111,"timestamp":"2024-10-01T21:37:55.755Z"}
 {"exitCode":"SIGHUP","level":"info","message":"👾 Game executed mainExample.DinoGame on /home/datascience/New Folder/dino2-sharkattack","timeElapsed":645216,"timestamp":"2024-10-01T21:38:11.432Z"}
+<<<<<<< HEAD
 {"exitCode":"SIGHUP","level":"info","message":"👾 Game executed mainExample.DinoGame on /home/datascience/New Folder/dino2-sharkattack","timeElapsed":336596,"timestamp":"2024-10-01T21:43:48.471Z"}
 {"level":"info","message":"⌛ Building environment","timeElapsed":148,"timestamp":"2024-10-01T21:44:37.860Z"}
 {"level":"info","message":"⌛ Validating dinoGame.wlk","timeElapsed":136,"timestamp":"2024-10-01T21:44:37.999Z"}
@@ -805,3 +806,5 @@
 {"level":"info","message":"⌛ Building environment","timeElapsed":178,"timestamp":"2024-10-01T22:13:54.201Z"}
 {"level":"info","message":"⌛ Validating mainExample.wpgm","timeElapsed":153,"timestamp":"2024-10-01T22:13:54.357Z"}
 {"level":"info","message":"⌛ Validating dinoGame.wlk","timeElapsed":112,"timestamp":"2024-10-01T22:13:54.471Z"}
+=======
+>>>>>>> cdb02c32cc0eeb9aaf111b6395d3f3ae8a47606a
