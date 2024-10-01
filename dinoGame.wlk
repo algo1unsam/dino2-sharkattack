@@ -56,6 +56,7 @@ object reloj {
 	method position() = game.at(1, game.height()-1)
 	
 	method pasarTiempo() {
+		tiempo +=1
 		//COMPLETAR
 	}
 	method iniciar(){
@@ -63,6 +64,9 @@ object reloj {
 		game.onTick(100,"tiempo",{self.pasarTiempo()})
 	}
 	method detener(){
+		if(!dino.estaVivo()){
+			tiempo.stop()
+		}
 		//COMPLETAR
 	}
 }
@@ -79,6 +83,10 @@ object cactus {
 	}
 	
 	method mover(){
+		if(self.position().x() == 0){
+			position = self.position().right(13)
+		}
+		else position = self.position().left(1)
 		//COMPLETAR
 	}
 	
@@ -104,6 +112,7 @@ object dino {
 	method image() = "dino.png"
 	
 	method saltar(){
+		keyboard.space().onPressDo{(self.position().up(1))}
 		//COMPLETAR
 	}
 	
