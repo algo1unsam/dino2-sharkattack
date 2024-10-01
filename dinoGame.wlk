@@ -56,7 +56,10 @@ object reloj {
 	
 	method pasarTiempo() {
 		tiempo +=1
+<<<<<<< HEAD
 		//COMPLETAR
+=======
+>>>>>>> b494614b8d4e4a6b53f30c24cf2c89ca434447f7
 	}
 	method iniciar(){
 		tiempo = 0
@@ -90,13 +93,10 @@ object cactus {
 	}
 	
 	method chocar(){
-		/*if(game.onCollideDo(dino, { algo => algo.teEncontro(pepita) })){
-
-		}*/
-		//COMPLETAR
+		game.onCollideDo(dino, ({elemento => elemento.detener()}))
 	}
     method detener(){
-		//COMPLETAR
+		game.stop()
 	}
 }
 
