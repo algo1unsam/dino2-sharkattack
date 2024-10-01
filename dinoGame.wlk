@@ -13,7 +13,6 @@ object juego{
 		game.addVisual(cactus)
 		game.addVisual(dino)
 		game.addVisual(reloj)
-	
 		keyboard.space().onPressDo{ self.jugar()}
 		game.onCollideDo(dino,{ obstaculo => obstaculo.chocar()})
 		
@@ -56,7 +55,7 @@ object reloj {
 	method position() = game.at(1, game.height()-1)
 	
 	method pasarTiempo() {
-		//COMPLETAR
+		tiempo = tiempo + 1
 	}
 	method iniciar(){
 		tiempo = 0
@@ -104,7 +103,6 @@ object dino {
 	method image() = "dino.png"
 	
 	method saltar(){
-		//COMPLETAR
 	}
 	
 	method subir(){
