@@ -55,12 +55,7 @@ object reloj {
 	method position() = game.at(1, game.height()-1)
 	
 	method pasarTiempo() {
-<<<<<<< HEAD
 		tiempo +=1
-		//COMPLETAR
-=======
-		tiempo = tiempo + 1
->>>>>>> e2abd9e2b3bf453f0730751ec2e37d98b3631386
 	}
 	method iniciar(){
 		tiempo = 0
@@ -94,13 +89,10 @@ object cactus {
 	}
 	
 	method chocar(){
-		/*if(game.onCollideDo(dino, { algo => algo.teEncontro(pepita) })){
-
-		}*/
-		//COMPLETAR
+		game.onCollideDo(dino, ({elemento => elemento.detener()}))
 	}
     method detener(){
-		//COMPLETAR
+		game.stop()
 	}
 }
 
@@ -120,7 +112,6 @@ object dino {
 	method saltar(){
 		self.subir()
 		self.bajar()
-		position = 
 
 		/*if(self.position().y() == suelo.position().y()){
 			keyboard.space().onPressDo{(self.subir())}
