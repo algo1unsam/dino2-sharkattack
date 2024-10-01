@@ -55,12 +55,8 @@ object reloj {
 	method position() = game.at(1, game.height()-1)
 	
 	method pasarTiempo() {
-<<<<<<< HEAD
 		tiempo +=1
 		//COMPLETAR
-=======
-		tiempo = tiempo + 1
->>>>>>> e2abd9e2b3bf453f0730751ec2e37d98b3631386
 	}
 	method iniciar(){
 		tiempo = 0
@@ -120,26 +116,21 @@ object dino {
 	method saltar(){
 		self.subir()
 		self.bajar()
-		position = 
 
-		/*if(self.position().y() == suelo.position().y()){
-			keyboard.space().onPressDo{(self.subir())}
-		}
-		game.onTick(1000,"bajar",{self.bajar()})*/
-		//position = self.position()
+		//position = game.at(1,suelo.position().y())
 		//COMPLETAR
 	}
 	
 	method subir(){
-		position = position.up(1)
+		if(self.position().y() == suelo.position().y()){
+			position = position.up(2)
+		}
 	}
 	
 	method bajar(){
-		if(self.position().y()!=suelo.position().y()){
-			position = position.down(1)
-		}
-		
+		game.schedule(800, { position = position.down(2)})
 	}
+	
 	method morir(){
 		game.say(self,"¡Auch!")
 		vivo = false
