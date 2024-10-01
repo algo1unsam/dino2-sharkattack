@@ -13,7 +13,6 @@ object juego{
 		game.addVisual(cactus)
 		game.addVisual(dino)
 		game.addVisual(reloj)
-	
 		keyboard.space().onPressDo{ self.jugar()}
 		game.onCollideDo(dino,{ obstaculo => obstaculo.chocar()})
 		
@@ -56,13 +55,20 @@ object reloj {
 	method position() = game.at(1, game.height()-1)
 	
 	method pasarTiempo() {
+		tiempo +=1
+<<<<<<< HEAD
 		//COMPLETAR
+=======
+>>>>>>> b494614b8d4e4a6b53f30c24cf2c89ca434447f7
 	}
 	method iniciar(){
 		tiempo = 0
 		game.onTick(100,"tiempo",{self.pasarTiempo()})
 	}
 	method detener(){
+		if(!dino.estaVivo()){
+			tiempo.stop()
+		}
 		//COMPLETAR
 	}
 }
@@ -79,14 +85,18 @@ object cactus {
 	}
 	
 	method mover(){
+		if(self.position().x() == 0){
+			position = self.position().right(13)
+		}
+		else position = self.position().left(1)
 		//COMPLETAR
 	}
 	
 	method chocar(){
-		//COMPLETAR
+		game.onCollideDo(dino, ({elemento => elemento.detener()}))
 	}
     method detener(){
-		//COMPLETAR
+		game.stop()
 	}
 }
 
@@ -104,16 +114,23 @@ object dino {
 	method image() = "dino.png"
 	
 	method saltar(){
+		self.subir()
+		self.bajar()
+
+		//position = game.at(1,suelo.position().y())
 		//COMPLETAR
 	}
 	
 	method subir(){
-		position = position.up(1)
+		if(self.position().y() == suelo.position().y()){
+			position = position.up(2)
+		}
 	}
 	
 	method bajar(){
-		position = position.down(1)
+		game.schedule(800, { position = position.down(2)})
 	}
+	
 	method morir(){
 		game.say(self,"¡Auch!")
 		vivo = false
