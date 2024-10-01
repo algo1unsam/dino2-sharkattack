@@ -115,7 +115,15 @@ object dino {
 	method image() = "dino.png"
 	
 	method saltar(){
-		keyboard.space().onPressDo{(self.position().up(1))}
+		self.subir()
+		self.bajar()
+		position = 
+
+		/*if(self.position().y() == suelo.position().y()){
+			keyboard.space().onPressDo{(self.subir())}
+		}
+		game.onTick(1000,"bajar",{self.bajar()})*/
+		//position = self.position()
 		//COMPLETAR
 	}
 	
@@ -124,7 +132,10 @@ object dino {
 	}
 	
 	method bajar(){
-		position = position.down(1)
+		if(self.position().y()!=suelo.position().y()){
+			position = position.down(1)
+		}
+		
 	}
 	method morir(){
 		game.say(self,"¡Auch!")
