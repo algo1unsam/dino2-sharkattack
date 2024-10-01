@@ -118,7 +118,6 @@ object dino {
 	method image() = "dino.png"
 	
 	method saltar(){
-<<<<<<< HEAD
 		self.subir()
 		self.bajar()
 		position = 
@@ -129,8 +128,6 @@ object dino {
 		game.onTick(1000,"bajar",{self.bajar()})*/
 		//position = self.position()
 		//COMPLETAR
-=======
->>>>>>> e2abd9e2b3bf453f0730751ec2e37d98b3631386
 	}
 	
 	method subir(){
