@@ -91,6 +91,9 @@ object cactus {
 	}
 	
 	method chocar(){
+		/*if(game.onCollideDo(dino, { algo => algo.teEncontro(pepita) })){
+
+		}*/
 		//COMPLETAR
 	}
     method detener(){
